@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/%22%3E">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<head th:include="header.html::header">
+    <title>Customers</title>
 </head>
 <body>
-<h1>Customers</h1>
-<table>
-    <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Age</th>
-        <th>Gender</th>
-        <th>Weight</th>
-        <th>Height</th>
-        <th>Bmi</th>
-        <th>Bmi Type</th>
-    </tr>
-    <tr th:each="customer : ${customers}">
-        <td th:text="${customer.id}">123</td>
-        <td th:text="${customer.name}">Joe</td>
-        <td th:text="${customer.age}">Dado</td>
-        <td th:text="${customer.gender}">Dado</td>
-        <td th:text="${customer.weight}">Dado</td>
-        <td th:text="${customer.height}">Dado</td>
-        <td th:text="${customer.bmi}">Dado</td>
-        <td th:text="${customer.bmiType}">Dado</td>
-    </tr>
-</table>
+    <div th:insert="navbar.html::navbar">
+        <span id="navbar-text" class="navbar-text">
+            Customers
+        </span>
+    </div>
+    <div class="container-fluid">
+        <h1>Customers</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Weight</th>
+                <th scope="col">Height</th>
+                <th scope="col">Bmi</th>
+                <th scope="col">Bmi Type</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr th:each="customer : ${customers}">
+                <td th:text="${customer.id}">123</td>
+                <td th:text="${customer.name}">Joe</td>
+                <td th:text="${customer.age}">Dado</td>
+                <td th:text="${customer.gender}">Dado</td>
+                <td th:text="${customer.weight}">Dado</td>
+                <td th:text="${customer.height}">Dado</td>
+                <td th:text="${customer.bmi}">Dado</td>
+                <td th:text="${customer.bmiType}">Dado</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

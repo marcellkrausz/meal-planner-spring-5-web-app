@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/%22%3E">
+<head th:include="header.html::header">
+    <title>Main Page</title>
+</head>
+<body>
+    <div th:insert="navbar.html::navbar">
+        <span id="navbar-text" class="navbar-text">
+            Main page
+        </span>
+    </div>
+    <div class="row">
+        <div class="col-xl-2"></div>
+            <div class="col-xl-8">
+                <img src="https://veebrant.com/wp-content/uploads/2019/06/barcelona-gaudi-destination-featured.jpg" class="rounded-circle" alt="Barcelona">
+            </div>
+        <div class="col-xl-2"></div>
+    </div>
+</body>
+</html>
