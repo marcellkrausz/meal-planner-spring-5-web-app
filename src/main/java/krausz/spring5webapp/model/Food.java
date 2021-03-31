@@ -1,10 +1,15 @@
 package krausz.spring5webapp.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Setter
+@Getter
 @Entity
 public class Food {
     @Id
@@ -24,38 +29,6 @@ public class Food {
     }
 
     public Food() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public FoodType getType() {
-        return type;
-    }
-
-    public void setType(FoodType type) {
-        this.type = type;
-    }
-
-    public Set<Customer> getCustomers() {
-        return customers;
-    }
-
-    public void setCustomers(Set<Customer> customers) {
-        this.customers = customers;
     }
 
     @Override

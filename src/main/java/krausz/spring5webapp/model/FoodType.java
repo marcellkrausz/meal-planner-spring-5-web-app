@@ -1,7 +1,5 @@
 package krausz.spring5webapp.model;
 
-import javax.persistence.ManyToOne;
-
 public enum FoodType {
     CARBOHYDRATES("Carbohydrates"),
     PROTEINS("Proteins"),

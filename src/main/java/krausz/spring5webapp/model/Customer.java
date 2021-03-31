@@ -1,11 +1,16 @@
 package krausz.spring5webapp.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
+@Setter
+@Getter
 @Entity
 public class Customer {
     @Id
@@ -58,78 +63,6 @@ public class Customer {
           recommendedFood.add(food);
           food.getCustomers().add(this);
       }
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public double getWeight() {
-        return weight;
-    }
-
-    public void setWeight(double weight) {
-        this.weight = weight;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public double getBmi() {
-        return bmi;
-    }
-
-    public void setBmi(double bmi) {
-        this.bmi = bmi;
-    }
-
-    public String getBmiType() {
-        return bmiType;
-    }
-
-    public void setBmiType(String bmiType) {
-        this.bmiType = bmiType;
-    }
-
-    public Set<Food> getRecommendedFood() {
-        return recommendedFood;
-    }
-
-    public void setRecommendedFood(Set<Food> recommendedFood) {
-        this.recommendedFood = recommendedFood;
     }
 
     @Override
